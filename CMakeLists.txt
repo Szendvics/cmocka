@@ -53,7 +53,9 @@ if (UNIT_TESTING)
     add_subdirectory(tests)
 endif (UNIT_TESTING)
 
+if(WIN32)
 add_subdirectory(example)
+endif()
 
 # pkg-config file
 configure_file(cmocka.pc.cmake ${CMAKE_CURRENT_BINARY_DIR}/cmocka.pc)
